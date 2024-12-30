@@ -39,6 +39,7 @@ class OkapiServiceRunner
         'services/caches/geocaches',
         'services/caches/mark',
         'services/caches/save_personal_notes',
+        'services/caches/save_user_coords',
         'services/caches/formatters/gpx',
         'services/caches/formatters/garmin',
         'services/caches/formatters/ggz',

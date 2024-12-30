@@ -1,0 +1,29 @@
+<xml>
+    <brief>Update personal coordinates of a geocache</brief>
+    <issue-id>629</issue-id>
+    <desc>
+	<p>This method allows your users to update the coordinates of their
+	personal geocache coordinates.</p>
+
+        <p>Current personal coordinates for the geocache can be retrieved
+        using the <b>alt_wpts</b> field in the
+        <a href="%OKAPI:methodargref:services/caches/geocache#fields%">services/caches/geocache</a>
+        method.</p>
+    </desc>
+    <req name='cache_code'>
+        <p>Code of the geocache</p>
+    </req>
+    <req name='user_coords'>
+        <p>The coordinates are defined by a string in the format "lat|lon"</p>
+	<p>Use positive numbers for latitudes in the northern hemisphere and longitudes
+	in the eastern hemisphere (and negative for southern and western hemispheres
+	accordingly). These are full degrees with a dot as a decimal point (ex. "48.7|15.89").</p>
+    </req>
+    <common-format-params/>
+    <returns>
+        <p>A dictionary of the following structure:</p>
+        <ul>
+            <li>success - true</li>
+        </ul>
+    </returns>
+</xml>
