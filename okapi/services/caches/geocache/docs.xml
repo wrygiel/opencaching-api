@@ -164,13 +164,20 @@
                 <p>More types are in use at some installations:</p>
                 <ul>
                     <li><b>Own</b>, a moving geocache which is carried by the owner,</li>
-                    <li><b>Podcast</b>, a geocache with attached MP3 file(s). The MP3
-                        data is not accessible via OKAPI. This type is only in use
-                        at Opencaching.US.</li>
+                    <li><b>BIT cache</b>, a laminated label with log password,</li>
+                    <li><b>Guestbook</b>, a real world guestbook also used as a logbook,</li>
+                    <li><b>Benchmark</b>, a geodetic benchmark,</li>
+                    <li><b>Challenge</b>, logging requires the geocacher to meet some sort 
+                        of goal or task,</li>
+                    <li><b><s>Podcast</s></b>, a geocache with attached MP3 file(s). 
+                        <i>This cache type no longer exists and it's reference is kept
+                        for compatibility reasons.</i></li>
                     <li>(Types may be added or removed. Your application MUST be
                         prepared for any new types and may handle them as "Other".)</li>
                 </ul>
-                <p>There are even more types, but OKAPI maps them to common types
+                <p>Opencaching cache types are documented 
+                <a href="https://wiki.opencaching.eu/index.php?title=Cache_types" target="_blank">here</a></p>
+                <p>There are may be more types, but OKAPI maps them to common types
                 (and eventually some attributes), so you won't see them in OKAPI data.</p>
             </li>
             <li>

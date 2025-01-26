@@ -335,6 +335,7 @@ class Okapi
             case 'OCRO':
                 $urls = array(
                     "http://www.opencaching.ro/okapi/",
+                    "https://www.opencaching.ro/okapi/",
                 );
                 break;
             case 'OCUK':
@@ -346,7 +347,7 @@ class Okapi
             case 'OCUS':
                 $urls = array(
                     "http://www.opencaching.us/okapi/",
-                    "http://opencaching.us/okapi/",
+                    "https://www.opencaching.us/okapi/",
                 );
                 break;
             default:
@@ -928,20 +929,24 @@ class Okapi
         #
 
         # common types of all OC sites
+        'Other'        => ['oc.de' => 1, 'oc.pl' => 1],
         'Traditional'  => ['oc.de' => 2, 'oc.pl' => 2],
         'Multi'        => ['oc.de' => 3, 'oc.pl' => 3],
-        'Quiz'         => ['oc.de' => 7, 'oc.pl' => 7],
         'Virtual'      => ['oc.de' => 4, 'oc.pl' => 4],
-        'Event'        => ['oc.de' => 6, 'oc.pl' => 6],
         'Webcam'       => ['oc.de' => 5, 'oc.pl' => 5],
-        'Moving'       => ['oc.de' => 9, 'oc.pl' => 8],
-        'Other'        => ['oc.de' => 1, 'oc.pl' => 1],
+        'Event'        => ['oc.de' => 6, 'oc.pl' => 6],
+        'Quiz'         => ['oc.de' => 7, 'oc.pl' => 7],
+        'Moving'       => ['oc.de' => 9, 'oc.pl' => 9],
 
         # local types
-        'Podcast'      => ['oc.pl' => 9],
-        'Own'          => ['oc.pl' => 10],
         'Math/Physics' => ['oc.de' => 8, 'mapto' => ['name' => 'Quiz', 'acodes' => ['A16']]],
+        'Podcast'      => [],
         'Drive-In'     => ['oc.de' => 10, 'mapto' => ['name' => 'Traditional', 'acodes' => ['A19']]],
+        'Own'          => ['oc.pl' => 11],
+        'BIT Cache'    => ['oc.pl' => 12],
+        'Guestbook'    => ['oc.pl' => 13],
+        'Benchmark'    => ['oc.pl' => 14],
+        'Challenge'    => ['oc.pl' => 15],
     );
 
     /** Return all types of this OC site which are exposed by OKAPI. **/
