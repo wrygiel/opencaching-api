@@ -33,7 +33,38 @@ class WebService
         $result['has_image_positions'] = Settings::get('OC_BRANCH') == 'oc.de';
         $result['has_ratings'] = Settings::get('OC_BRANCH') == 'oc.pl';
         $result['geocache_passwd_max_length'] = Db::field_length('caches', 'logpw');
+        if (Settings::get('OC_BRANCH') == 'oc.de') {
+            $result['has_draft_logs'] = true;
+            $result['has_lists']      = true;
+            $result['cache_types']    = self::getCacheTypes();
+            $result['log_types']      = self::getLogTypes();
+
+        }
 
         return Okapi::formatted_response($request, $result);
+    }
+
+    private static function getCacheTypes() {
+        $rs = Db::query("
+           SELECT name
+            FROM cache_type;
+        ");
+        $cache_types = [];
+        while ($row = Db::fetch_assoc($rs)) {
+            $cache_types[] = $row['name'];
+        }
+        return $cache_types;
+    }
+
+    private static function getLogTypes() {
+        $rs = Db::query("
+           SELECT name
+            FROM log_types;
+        ");
+        $log_types = [];
+        while ($row = Db::fetch_assoc($rs)) {
+            $log_types[] = $row['name'];
+        }
+        return $log_types;
     }
 }
